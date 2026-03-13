@@ -9,16 +9,16 @@
 <form method="get">
         Número 1: <input type="number" name="n1"><br><br>
         Número 2: <input type="number" name="n2"><br><br>
-        <input type="submit" value= "Calcular">
+        <input type="submit" notes= "Calcular">
 </form>
 <?php
 if(isset($_GET["n1"]) && isset($_GET["n2"])) {
     $n1 = $_GET["n1"];
     $n2 = $_GET["n2"];
 
-    if($n1>$n2){
-        echo("$n1 é maior");
-    }else echo("$n2 é maior");
+    $média = ($n1+$n2)/2;
+    echo "A média entre $n1 e $n2 é $média";
 }
 ?>
+</body>
 </html>

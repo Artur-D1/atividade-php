@@ -15,9 +15,9 @@ if(isset($_GET['n'])) {
 
     $n = $_GET['n'];
 
-    if($n%2==0){;
-    echo("ele é par");
-}else echo("ele é ímpar");
+    if($n%2==0){
+    echo("$n é par");
+}else echo("$n é ímpar");
 }
 ?>
 </body>
