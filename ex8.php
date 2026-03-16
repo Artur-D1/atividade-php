@@ -13,16 +13,19 @@
         <input type="submit" notes= "Calcular">
 </form>
 <?php
-if(isset($_GET["n1"]) && isset($_GET["n2"]) &&($_GET["n3"])) {
+if(isset($_GET["n1"]) && isset($_GET["n2"]) &&(isset($_GET["n3"]))) {
     $n1 = $_GET["n1"];
     $n2 = $_GET["n2"];
     $n3 = $_GET["n3"];
 
-    if(($n1)($n2)($n3)>=7) {
+    $média = ($n1+$n2+$n3)/3;
+
+    if($média>=7) {
     echo("Aprovado");
-    }else if(($n1)($n2)($n3)>=5 <7){
+    }else if($média>=5 &&  $média<7){
     echo("Recuperação");
-    }else(($n1)($n2)($n3))
+    }else
+    echo("Reprovado");
 }
 ?>
 </body>
